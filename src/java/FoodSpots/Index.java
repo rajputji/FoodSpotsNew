@@ -18,6 +18,7 @@ public class Index extends HttpServlet {
             RequestDispatcher rd = request.getRequestDispatcher("headlinks.html");
             rd.include(request, response);
 
+//Added this comment
             out.println("<body>");
             rd = request.getRequestDispatcher("header.html");
             rd.include(request, response);
@@ -25,8 +26,8 @@ public class Index extends HttpServlet {
             rd = request.getRequestDispatcher("index.html");
             rd.include(request, response);
             
-           // rd = request.getRequestDispatcher("footer.html");
-            //rd.include(request, response);
+            rd = request.getRequestDispatcher("footer.html");
+            rd.include(request, response);
 
             rd = request.getRequestDispatcher("footlinks.html");
             rd.include(request, response);
