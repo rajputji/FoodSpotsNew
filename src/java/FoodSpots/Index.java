@@ -25,8 +25,8 @@ public class Index extends HttpServlet {
             rd = request.getRequestDispatcher("index.html");
             rd.include(request, response);
             
-            rd = request.getRequestDispatcher("footer.html");
-            rd.include(request, response);
+           // rd = request.getRequestDispatcher("footer.html");
+            //rd.include(request, response);
 
             rd = request.getRequestDispatcher("footlinks.html");
             rd.include(request, response);
