@@ -1,0 +1,55 @@
+
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<script type="text/javascript">
+    function check()
+    {
+        let p1=document.getElementsByName("password")[0];
+        let p2=document.getElementsByName("cfmpassword")[0];
+        
+        if((p1.value)===(p2.value))
+        {
+            return true;
+        }
+        alert("Password and Confrim Password Doesn't Match!");
+        return false;
+    }
+ </script>
+	<!-- main -->
+	<div class="main-w3layouts wrapper" style="font:inherit;color:#fff">
+		<h1>Registration Form</h1>
+		<div class="main-agileinfo">
+			<div class="agileits-top">
+				<form action="RegisterServlet" method="post" onsubmit="return check()">
+					<input class="text" type="text" name="Username" placeholder="Username" required="">
+					<input class="text email" type="email" name="email" placeholder="Email" required="">
+					<input class="text" type="password" name="password" placeholder="Password" required="">
+					<input class="text w3lpass" type="password" name="cfmpassword" placeholder="Confirm Password" required="">
+                                        <input class="text" type="text" name="mobno" placeholder="Mobile no." required=""><br/>
+                                        Gender:<input type="radio" value="Male" name="gender" >Male&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <input type="radio" value="Female" name="gender">Female<br/><br/>
+					<div class="wthree-text">
+						<label class="anim">
+							<input type="checkbox" class="checkbox" required>
+							<span>I Agree To The Terms & Conditions</span>
+						</label>
+						<div class="clear"> </div>
+					</div>
+					<input type="submit" value="SIGNUP">
+				</form>
+				<p>Already have an Account? <a href="index.html"> Login Now!</a></p>
+			</div>
+		</div>
+		
+		<ul class="colorlib-bubbles">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
