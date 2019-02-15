@@ -892,6 +892,7 @@ background-color: red;
 .blog-post {
   position: relative;
   margin-bottom: 30px;
+  overflow: hidden;
 }
 
 .blog-thumb {
@@ -900,7 +901,8 @@ background-color: red;
 }
 
 .blog-thumb img {
-  width: 100%;
+  width: 100%; 
+  height: 243px;
 }
 
 .blog-content {
@@ -932,6 +934,11 @@ background-color: red;
 
 .content-hide p {
   color: #fff;
+  
+/*  to limit the content of paragraph*/
+/*  overflow: hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;*/
 }
 
 /*-- End Latest Posts --*/
