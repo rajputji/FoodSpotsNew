@@ -1,35 +1,78 @@
-        <header>
-            <div id="main-header" >
-                <div class="container" style="margin-left: 0px;width: 100%; " >
-                    <div class="row" >
-                        <div class="col-md-2" style="padding-left:0px;">
-                            <div class="logo">
-                                <a href="#"><img src="images/logo.png" title="FoodSpots" alt="FoodSpots : Find Best Street Food" ></a>
-                            </div>
-                        </div>
-                        <div class="col-md-5">
-                            <div class="main-menu">
-                                <ul>
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="about-us.html">Add Food Spots</a></li>
-                                    <li><a href="products.html">About</a></li>
-                                    <li><a href="contact-us.html">Contact</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="search-box">  
-                                <form name="search_form" method="get" class="search_form">
-                                    <input id="search" type="text" name="city" placeholder="Your City Name"/>
-                                    <input type="submit" id="search-button" />
-                                </form>
-                            </div>
-                        </div>
-                        <div class="col-md-offset-0 col-md-2 col-sm-offset-4 col-sm-4 col-xs-offset-4 col-xs-4 btn-group-vertical">
-                            <input type="button" class="btn btn-primary" name="login" value="Log In" id="login"/>
-                            <input type="button" class="btn btn-warning" name="register" value="Register" id="register"/>
-                        </div>
+<header>
+    <div id="main-header" >
+        <div class="container" style="margin-left: 0px;width: 100%; " >
+            <div class="row" >
+                <div class="col-md-2" style="padding-left:0px;">
+                    <div class="logo">
+                        <a href="#"><img src="images/logo.png" title="FoodSpots" alt="FoodSpots : Find Best Street Food" ></a>
                     </div>
                 </div>
+                <div class="col-md-5">
+                    <div class="main-menu">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about-us.html">Add Food Spots</a></li>
+                            <li><a href="products.html">About</a></li>
+                            <li><a href="contact-us.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="search-box">  
+                        <form name="search_form" method="get" class="search_form">
+                            <input id="search" type="text" name="city" placeholder="Your City Name"/>
+                            <input type="submit" id="search-button" />
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-offset-0 col-md-2 col-sm-offset-4 col-sm-4 col-xs-offset-4 col-xs-4 btn-group-vertical">
+                    <input type="button" class="btn btn-primary" name="login" value="Log In" id="login"
+                           onclick="document.getElementById('modal-wrapper').style.display = 'block'" />
+                    <input type="button" class="btn btn-warning" name="register" value="Register" id="register"/>
+                </div>
             </div>
-        </header>
+        </div>
+    </div>
+</header>
+
+<div id="modal-wrapper" class="modal">
+
+    <form class="modal-content animate form-horizontal" action="#">
+
+        <div class="imgcontainer">
+            <span onclick="document.getElementById('modal-wrapper').style.display = 'none'" class="close" title="Close PopUp">&times;</span>
+            <img src="images/logo.png" alt="Avatar" class="avatar">
+            <h3 style="text-align:center;color:yellowgreen;">Login</h3>
+        </div>
+        <div class="container">
+            <div class="form-group">
+                <div class="col-md-12">
+                    <input type="text" class="form-control" placeholder="Enter Username" name="uname">
+                </div>
+                <div class="col-md-12">
+                    <input type="password" class="form-control" placeholder="Enter Password" name="psw">        
+                </div>
+            </div>
+            <br/>
+            <div class="form-group">        
+                <div class="col-md-offset-4">
+                    <button type="submit" class="btn btn-primary" style="width: 50%;">Login</button>
+                </div>
+            </div>
+            <a href="#" style="text-decoration:none; float:right; margin:10px 10px 0px 0px;">Forgot Password ?</a>
+        </div>
+
+    </form>
+
+</div>
+
+<script>
+// If user clicks anywhere outside of the modal, Modal will close
+
+    var modal = document.getElementById('modal-wrapper');
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
