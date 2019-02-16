@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+package FoodSpots;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -12,26 +8,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- *
- * @author SHWETA AGARWAL
- */
-public class Registration extends HttpServlet {
+public class Register extends HttpServlet {
 
-   
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-           RequestDispatcher rd = request.getRequestDispatcher("headlinks.html");
+             out.println("<!DOCTYPE html>");
+            RequestDispatcher rd = request.getRequestDispatcher("headlinks.html");
             rd.include(request, response);
 
-//Added this comment
             out.println("<body>");
-            rd = request.getRequestDispatcher("header.html");
-            rd.include(request, response);
 
             rd = request.getRequestDispatcher("registration.html");
             rd.include(request, response);
@@ -41,7 +28,15 @@ public class Registration extends HttpServlet {
 
             rd = request.getRequestDispatcher("footlinks.html");
             rd.include(request, response);
-        }
+            
+            String msg = request.getParameter("msg");
+            if (msg != null || msg == "") {
+                out.println("<script>alert('" + msg + "')</script>");
+            }
+
+            out.println("</body>");
+            out.println("</html>");
+       }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

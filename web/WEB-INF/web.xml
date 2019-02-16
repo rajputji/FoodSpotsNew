@@ -14,7 +14,11 @@
     </servlet>
     <servlet>
         <servlet-name>Registration</servlet-name>
-        <servlet-class>Registration</servlet-class>
+        <servlet-class>FoodSpots.Registration</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Register</servlet-name>
+        <servlet-class>FoodSpots.Register</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Index</servlet-name>
@@ -31,6 +35,10 @@
     <servlet-mapping>
         <servlet-name>Registration</servlet-name>
         <url-pattern>/Registration</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Register</servlet-name>
+        <url-pattern>/Register</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

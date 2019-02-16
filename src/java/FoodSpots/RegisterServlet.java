@@ -48,7 +48,8 @@ public class RegisterServlet extends HttpServlet {
             try {
                 Class.forName(dbDriver);
             } catch (ClassNotFoundException e) {
-                out.println("error");
+                out.println("<script>alert('Sorry..Connection cannot Established!!');</script>");
+                //out.println("error");
             }
             try {
                 Connection con = DriverManager.getConnection(dbURL + dbName,
@@ -61,17 +62,21 @@ public class RegisterServlet extends HttpServlet {
                 // Close all the connections 
                 st.close();
                 con.close();
-                response.sendRedirect("index.html");
-                out.println("</body></html>");
+               // out.println("<script>alert('Thanku for Registration');</script>");
+                response.sendRedirect("Index.php?msg=Thanku for Registration...");
+                //out.println("</body></html>");
 
             } catch (SQLException e) {
-                out.println("Error!!!");
+//                out.println("<script>alert('Already Registerd User....');</script>");
+                response.sendRedirect("Index.php?msg=Already Registerd User!");
+                //out.println("Error!!!");
             }
-        } catch (Exception e) {
+        out.println("</body>");
+        out.println("</html>");
+         }  
+        catch (Exception e) {
         }
-        //out.println("</body>");
-        //out.println("</html>");
-    }
+    }   
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -79,25 +84,13 @@ public class RegisterServlet extends HttpServlet {
         processRequest(request, response);
     }
 
-    /**
-     * Handles the HTTP <code>POST</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
+   
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
     }
 
-    /**
-     * Returns a short description of the servlet.
-     *
-     * @return a String containing servlet description
-     */
     @Override
     public String getServletInfo() {
         return "Short description";
