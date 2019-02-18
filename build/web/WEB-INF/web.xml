@@ -13,8 +13,8 @@
         <servlet-class>FoodSpots.RegisterServlet</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>Registration</servlet-name>
-        <servlet-class>Registration</servlet-class>
+        <servlet-name>AllImages</servlet-name>
+        <servlet-class>FoodSpots.AllImages</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Index</servlet-name>
@@ -29,8 +29,8 @@
         <url-pattern>/RegisterServlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>Registration</servlet-name>
-        <url-pattern>/Registration</url-pattern>
+        <servlet-name>AllImages</servlet-name>
+        <url-pattern>/AllImages</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
