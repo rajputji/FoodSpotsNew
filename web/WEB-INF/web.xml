@@ -16,6 +16,10 @@
         <servlet-name>AllImages</servlet-name>
         <servlet-class>FoodSpots.AllImages</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Register</servlet-name>
+        <servlet-class>FoodSpots.Register</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Index</servlet-name>
         <url-pattern>/Index.php</url-pattern>
@@ -31,6 +35,10 @@
     <servlet-mapping>
         <servlet-name>AllImages</servlet-name>
         <url-pattern>/AllImages</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Register</servlet-name>
+        <url-pattern>/Register</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
