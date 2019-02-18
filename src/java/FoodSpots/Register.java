@@ -22,7 +22,7 @@ public class Register extends HttpServlet {
             rd = request.getRequestDispatcher("header.html");
             rd.include(request, response);
             
-            rd = request.getRequestDispatcher("registration.html");
+            rd = request.getRequestDispatcher("register.html");
             rd.include(request, response);
 
             rd = request.getRequestDispatcher("footer.html");
