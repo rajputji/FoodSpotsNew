@@ -19,8 +19,10 @@ public class Register extends HttpServlet {
             rd.include(request, response);
 
             out.println("<body>");
-
-            rd = request.getRequestDispatcher("registration.html");
+            rd = request.getRequestDispatcher("header.html");
+            rd.include(request, response);
+            
+            rd = request.getRequestDispatcher("register.html");
             rd.include(request, response);
 
             rd = request.getRequestDispatcher("footer.html");
