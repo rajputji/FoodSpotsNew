@@ -1,0 +1,16 @@
+.setback
+{
+    background-color:#ff6666;
+    border-radius: 10px;
+    width:700px;
+    height: 70%;
+    margin: 30px 20px 0px 650px;
+    color:white;
+}
+
+.AddContainer
+{
+   background-image: url("images//bg2.jpg");
+   background-size:cover;
+    background-repeat: no-repeat;
+}
