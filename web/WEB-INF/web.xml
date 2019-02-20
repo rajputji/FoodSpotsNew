@@ -20,6 +20,14 @@
         <servlet-name>Register</servlet-name>
         <servlet-class>FoodSpots.Register</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>java</servlet-name>
+        <servlet-class>AddFoodSpot.java</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AddFoodSpot</servlet-name>
+        <servlet-class>FoodSpots.AddFoodSpot</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Index</servlet-name>
         <url-pattern>/Index.php</url-pattern>
@@ -39,6 +47,14 @@
     <servlet-mapping>
         <servlet-name>Register</servlet-name>
         <url-pattern>/Register</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>java</servlet-name>
+        <url-pattern>/java</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddFoodSpot</servlet-name>
+        <url-pattern>/AddFoodSpot</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

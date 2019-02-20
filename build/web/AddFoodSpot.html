@@ -1,0 +1,50 @@
+<div class="AddContainer"> 
+    <div class="container setback">
+        <h2>Item Information</h2><br/>
+        <form class="form-horizontal" action="itemservlet" >
+            <div class="form-group">
+                <label class="control-label col-sm-3" for="itemname">Item name:</label>
+                <div class="col-sm-5" style="margin-top:-20px;">
+                    <input type="text" class="form-control" id="itemname" placeholder="Enter name" name="itemname">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-3" for="speciality">Speciality:</label>
+                <div class="col-sm-5" style="margin-top:-20px;">
+                    <textarea  class="form-control" id="speciality" placeholder="Speciality" name="speciality" ></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-3" for="shopaddress">Shop Address:</label>
+                <div class="col-sm-5" style="margin-top:-20px;">
+                    <input type="text" class="form-control" id="shopaddress" placeholder="Shop Address" name="shopaddress">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-3" for="ownername">Owner Name:</label>
+                <div class="col-sm-5" style="margin-top:-20px;">
+                    <input type="text" class="form-control" id="ownername" placeholder="Owner Name" name="ownername">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-3" for="image">Image:</label>
+                <div class="col-sm-5" style="margin-top:-20px;">
+                    <input type="file" id="image"  name="image">
+                </div>
+            </div>  
+
+            <div class="form-group">        
+                <div class="col-sm-offset-2 col-sm-10">
+                    <div class="checkbox" style="margin-top:-20px;">
+                        <label style="margin-top:0px;"><input type="checkbox" name="remember"> Remember me</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">        
+                <div class="col-sm-offset-2 col-sm-10" style="margin-top:-20px;">
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
